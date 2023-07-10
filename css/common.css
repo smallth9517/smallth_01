@@ -1,0 +1,402 @@
+@charset "utf-8";
+/* common.css */
+
+#wrap{
+    width: 100%;
+    position: relative;
+}
+body, input, textarea{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #000;
+    /* 행간을 폰트 크기의 1.5배로 사용 */
+}
+img, input, button{
+    vertical-align: top;
+}
+input .button{
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+.hide{
+    position: fixed;
+    top: -99999px;
+    left: -99999px;
+    display: block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+/* clearFix */
+.cf::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* 모바일 시작 */
+/* 모바일 - 헤더 */
+#header{
+    position: relative;
+    border-bottom: 1px solid #e3e3e3;
+    height: 51px;
+}
+#h_in{
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.h_search .open{
+    display: block;
+    background-image: url(../img/search_icon.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px auto;
+    width: 20px;
+    height: 20px;
+    text-indent: -99999px;
+}
+.search_wrap{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    z-index: 600;
+}
+.search_in{
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+    padding-top: 90px;
+    padding-bottom: 100px;
+}
+.search_in p{
+    font-size: 31px;
+    line-height: 1.4;
+    font-weight: 600;
+    color: #000;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.search_in input{
+    display: block;
+    position: relative;
+    width: 100%;
+    border: 0;
+    font-size: 27px;
+    line-height: 45px;
+    height: 50px;
+    border-bottom: 2px solid #000;
+}
+.search_in button{
+    position: absolute;
+    bottom: 105px;
+    right: 5%;
+    border: 0;
+    text-indent: -99999px;
+    background-image: url(../img/search_icon.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px auto;
+    background-color: transparent;
+    width: 45px;
+    height: 45px;
+}
+.search_in span{
+    display: block;
+    position: absolute;
+    top: 12%;
+    right: 5%;
+    text-indent: -99999px;
+    background-image: url(../img/search_close.png);
+    background-position: center;
+    background-size: 50px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+.h_logo a{
+    display: block;
+    background-image: url(../img/logo_top.png);
+    background-position: center;
+    background-size: 76px auto;
+    background-repeat: no-repeat;
+    align-items: center;
+    width: 76px;
+    height: 25px;
+    text-indent: -99999px;
+}
+.pc_gnb{
+    display: none;
+}
+.h_logo_sub{
+    display: none;
+    position: absolute;
+    width: 123px;
+    height: 26px;
+    right: 75px;
+    top: 33px;
+    background-image: url(../img/mall_logo.png);
+    text-indent: -99999px;
+}
+.h_menu_btn{
+    display: block;
+    background-image: url(../img/btn-menu.svg);
+    background-repeat: no-repeat;
+    background-size: 20px auto;
+    width: 25px;
+    height: 25px;
+    text-indent: -99999px;
+    cursor: pointer;
+}
+.side_menu_bg{
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    opacity: 0.7;
+    z-index: 1;
+}
+.h_menu{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: -100%;
+    width: 29%;
+    background-color: #fff;
+    z-index: 100;
+}
+.side_menu{
+    position: relative;
+    margin-top: 51px;
+    bottom: 0;
+    right: 0;
+}
+.side_menu button{
+    position: absolute;
+    top: -45px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border: 0;
+    text-indent: -99999px;
+    background-image: url(../img/search_close.png);
+    background-size: 40px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.side_menu .d1 > a{
+    position: relative;
+    padding-left: 18px;
+    border-top: 1px solid #e3e3e3;
+}
+.side_menu .d1 .m1::after{
+    content: "";
+    position: absolute;
+    top: 17px;
+    right: 16px;
+    display: inline-block;
+    width: 10px;
+    height: 1px;
+    background-color: #949494;
+}
+.side_menu .d1:last-child .m1::after{
+    content: "";
+    background-color: transparent;
+}
+.side_menu .d1 .m1::before{
+    content: "";
+    position: absolute;
+    top: 13px;
+    right: 20px;
+    display: inline-block;
+    width: 1px;
+    height: 10px;
+    background-color: #949494;
+}
+.side_menu .d1:last-child .m1::before{
+    content: "";
+    background-color: transparent;
+}
+.side_menu .m1{
+    display: block;
+    color: #000;
+    font-size: 18px;
+    line-height: 2.2;
+}
+.side_menu .d1:last-child a{
+    display: block;
+    background-image: url(../img/mall_logo.png);
+    background-repeat: no-repeat;
+    background-size: 100px;
+    background-position: 18px 20px;
+    text-indent: -99999px;
+}
+.side_menu .d1:nth-child(7) .m1::after, .side_menu .d1:nth-child(7) .m1::before{
+    background-color: transparent;
+}
+.side_menu .d1:nth-child(7) a::after{
+    content: "";
+    display: block;
+    background-image: url(../img/icon_intranet.png);
+    background-size: 26px;
+    background-repeat: no-repeat;
+    width: 26px;
+    height: 26px;
+    top: 7px;
+    right: 15px;
+}
+.depth2{
+    display: none;
+    background-color: #93b658;
+    padding: 10px 10px 10px 20px;
+}
+.depth2 .d2 > a, .depth2 dt{
+    color: #fff;
+    line-height: 1.7;
+    font-size: 15px;
+    font-weight: 400;
+}
+/* 테블릿 시작 */
+/* 테블릿 - 헤더 */
+@media screen and (min-width:768px){
+
+}
+/* 테블릿 종료 */
+/* PC 시작 */
+@media screen and (min-width:1100px){
+    #wrap{
+        position: relative;
+    }
+    #header{
+        height: 90px;
+    }
+    #h_in{
+        position: relative;
+        width: 1200px;
+        margin: 0 auto;
+    }
+    .h_search .open{
+        position: absolute;
+        top: 30px;
+        right: 18px;
+        background-size: 25px auto;
+        width: 25px;
+        height: 25px;
+    }
+    .search_in{
+        width: 50%;
+        margin: 0 auto;
+    }
+    .search_in span{
+        right: 25%;
+    }
+    .search_in button{
+        right: 25%;
+    }
+    .h_logo a{
+        position: absolute;
+        display: block;
+        top: 22px;
+        left: -17px;
+        width: 148px;
+        height: 50px;
+        background-size: 148px;
+    }
+    .pc_gnb{
+        position: absolute;
+        top: 32px;
+        left: 180px;
+        width: 750px;
+        height: 57px;
+        display: block;
+    }
+    .pc_gnb > ul{
+        display: flex;
+    }
+    .pc_gnb .d1:last-child a::after{
+        content: "";
+        position: absolute;
+        background-color: #000;
+        width: 1px;
+        height: 25px;
+        right: 25px;
+        top: 1px;
+        opacity: 0.3;
+    }
+    .pc_gnb .m1{
+        display: block;
+        font-size: 19px;
+        font-weight: 500;
+        color: #333;
+        line-height: 1.5;
+        text-align: center;
+        margin-right: 50px;
+        height: 57px;
+    }
+    .d2{
+        display: none;
+        position: absolute;
+        top: 60px;
+        width: 1800px;
+        height: 400px;
+        left: -500px;
+        border-top: 2px solid #444;
+        background-color: rgba(255, 255, 255, 0.8);
+        z-index: 1;
+    }
+    .d2_in{
+        display: flex;
+        justify-content: center;
+    }
+    .d2_row{
+        padding-top: 20px;
+        width: 180px;
+        text-align: center;
+        border-right: 1px solid #ddd;
+    }
+    .d2_row:first-child{
+        border-left: 1px solid #ddd;
+    }
+    .d2_row:nth-child(2) dl{
+        margin-bottom: 8px;
+    }
+    .d2_row:nth-child(2) dl::before{
+        content: "";
+        background-color: #ff0000;
+        width: 150px;
+        height: 2px;
+        bottom: 50px;
+    }
+    .d2_row dt{
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 2;
+    }
+    .pc_gnb .d2 dd a{
+        color: #4b4b4b;
+        line-height: 2;
+    }
+    .pc_gnb .d2 dd a:hover{
+        color: #93b658;
+    }
+    .h_logo_sub{
+        display: block;
+        right: 95px;
+    }
+    .h_menu_btn{
+        display: none;
+    }
+}
+/* PC 종료 */
