@@ -267,6 +267,9 @@ a{
     left: 50%;
     transform: translateX(-50%);
 }
+.sub_img2{
+    display: none;
+}
 .sub_img_pc{
     display: none;
 }
@@ -281,15 +284,103 @@ a{
 }
 /* 메인5 */
 .main5{
-    width: 100%;
     height: auto;
+    margin-top: 50px;
+    margin-bottom: 100px;
 }
 .main5_in{
-    padding: 25px 60px;
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
 }
 .m5_bg{
     width: 100%;
-    height: auto;
+    height: 370px;
+    background-position: center;
+    object-fit: cover;
+}
+.m5_item{
+    position: absolute;
+    align-items: center;
+    left: 50%;
+    transform: translate(-50%);
+    padding-top: 30px;
+}
+.item_in{
+    width: 100%;
+    height: 100%;
+}
+.m5_title{
+    position: relative;
+    color: #cecece;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 55px;
+}
+.m5_title span{
+    color: #fff;
+    font-size: 23px;
+    font-weight: 500;
+}
+.m5_title::after{
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+}
+.m5_input{
+    display: flex;
+}
+.place{
+    position: relative;
+    display: block;
+    width: 150px;
+    background-color: #fff;
+    border-radius: 4px;
+    line-height: 3.4;
+    padding-left: 15px;
+    margin-right: 10px;
+    color: #777;
+}
+.place::after{
+    content: "";
+    position: absolute;
+    background-color: #777;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px;
+    top: 0;
+    right: 0;
+} /* 왜 안됌? */
+
+.place_drop{
+    display: none;
+}
+.input_right{
+    display: flex;
+}
+.input_right input{
+    display: block;
+    width: 250px;
+    border: 0;
+    border-radius: 4px;
+    margin-right: 10px;
+    padding-left: 15px;
+}
+.input_right button{
+    width: 58px;
+    border: 0;
+    border-radius: 4px;
+    background-color: #143d35;
+    text-indent: -99999px;
+    background-image: url(../img/btn_search.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px;
 }
 /* ---------------테블릿----------- */
 @media screen and (min-width:768px){
@@ -411,7 +502,16 @@ a{
     }
     /* 메인4 */
     .link_mo{
-        display: none;
+        font-size: 25px;
+        margin-bottom: 30px;
+        opacity: 0;
+        transition: 0.3s;
+    }
+    .link_left:hover .link_mo{
+        opacity: 1;
+    }
+    .link_right:hover .link_mo{
+        opacity: 1;
     }
     .slick_wrap{
         position: relative;
@@ -526,8 +626,15 @@ a{
     .top_pc p span{
         font-weight: 500;
     }
-    .link_bg{
-        display: none;
+    .link_bg::before{
+        opacity: 0;
+        transition: 0.3s;
+    }
+    .link_left:hover .link_bg::before{
+        opacity: 1;
+    }
+    .link_right:hover .link_bg::before{
+        opacity: 1;
     }
     .link_in{
         display: block;
@@ -543,6 +650,34 @@ a{
         width: 30px;
         height: 30px;
         background-size: 30px;
+    }
+    .link_left:hover .sub_img{
+        opacity: 0;
+        transition: 0.3s;
+    }
+    .link_left:hover .sub_img2{
+        display: block;
+        opacity: 1;
+        transition: 0.3s;
+    }
+    .link_right:hover .sub_img_pc{
+        opacity: 0;
+        transition: 0.3s;
+    }
+    .link_right:hover .sub_img2{
+        display: block;
+        opacity: 1;
+        transition: 0.3s;
+    }
+    .sub_img2{
+        display: none;
+        position: absolute;
+        top: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 70px;
+        height: 70px;
+        z-index: 1;
     }
     .link_right .sub_img{
         display: none;
@@ -569,6 +704,11 @@ a{
         flex-direction: column;
         justify-content: space-between;
         width: 100%;
+        opacity: 1;
+        transition: 0.3s;
+    }
+    .link_pc:hover{
+        opacity: 0;
     }
     .link_pc div{
         height: 80px;
@@ -612,7 +752,7 @@ a{
     
 }
 
-/* PC */
+/*----------------PC---------------*/
 @media screen and (min-width:1100px){
     .inner{
         width: 1200px;
@@ -635,8 +775,14 @@ a{
         width: 30px;
         height: 30px;
     }
+    /* 메인4 */
     .m4_slick{
         width: 1200px;
         margin: 0 auto; 
+    }
+    .link_in{
+        display: flex;
+        width: 1200px;
+        margin: 0 auto;
     }
 }
