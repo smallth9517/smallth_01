@@ -165,6 +165,20 @@ a{
     margin-bottom: 15px;
     color: #a0bf6c;
 }
+.m2_right{
+    position: relative;
+}
+.slick-dots{
+    display: block;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 50%;
+    left: 5%;
+    border: 0;
+    background-color: #1e90ff;
+} /* 메인2 점 만들기 */
+
 /* 메인3 */
 .main3{
     margin-top: 20px;
@@ -295,7 +309,7 @@ a{
 }
 .m5_bg{
     width: 100%;
-    height: 370px;
+    height: 380px;
     background-position: center;
     object-fit: cover;
 }
@@ -305,10 +319,6 @@ a{
     left: 50%;
     transform: translate(-50%);
     padding-top: 30px;
-}
-.item_in{
-    width: 100%;
-    height: 100%;
 }
 .m5_title{
     position: relative;
@@ -341,24 +351,20 @@ a{
     width: 150px;
     background-color: #fff;
     border-radius: 4px;
-    line-height: 3.4;
+    line-height: 3;
     padding-left: 15px;
     margin-right: 10px;
     color: #777;
+    font-size: 16px;
 }
 .place::after{
     content: "";
     position: absolute;
-    background-color: #777;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-top: 10px;
-    top: 0;
-    right: 0;
-} /* 왜 안됌? */
-
-.place_drop{
-    display: none;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 5px solid #777;
+    top: 22px;
+    right: 10px;
 }
 .input_right{
     display: flex;
@@ -370,9 +376,10 @@ a{
     border-radius: 4px;
     margin-right: 10px;
     padding-left: 15px;
+    font-size: 16px;
 }
 .input_right button{
-    width: 58px;
+    width: 60px;
     border: 0;
     border-radius: 4px;
     background-color: #143d35;
@@ -381,6 +388,54 @@ a{
     background-repeat: no-repeat;
     background-position: center;
     background-size: 20px;
+}
+.m5_text{
+    color: #fff;
+    text-align: center;
+    font-size: 16.5px;
+    font-weight: 100;
+    margin-top: 15px;
+    line-height: 1.6;
+}
+.m5_logo{
+    display: flex;
+    margin-top: 15px;
+}
+.m5_logo p{
+    margin-right: 10px;
+    cursor: pointer;
+}
+.m5_logo p:first-child{
+    display: block;
+    width: 165px;
+    height: 70px;
+    background-image: url(../img/store_bn1.jpg);
+    text-indent: -99999px;
+}
+.m5_logo p:last-child{
+    display: block;
+    width: 165px;
+    height: 70px;
+    background-image: url(../img/store_bn2.jpg);
+    text-indent: -99999px;
+}
+.place_drop{
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    width: 165px;
+    border: 1px solid #000;
+    z-index: 1;
+}
+.place_drop a{
+    display: block;
+    font-size: 16px;
+    color: #777;
+    padding-left: 10px;
+}
+.place_drop a:hover{
+    color: #fff;
+    background-color: #1e90ff;
 }
 /* ---------------테블릿----------- */
 @media screen and (min-width:768px){
@@ -418,16 +473,15 @@ a{
     .slick_wrap{
         display: block;
     }
-    .inner{
+    .main1 .inner{
         width: 100%;
         margin: 0 auto;
     }
     .slide_photo .pc{
         display: block;
-        margin-left: -360px;
     }
     .slide_photo .pc img{
-        width: 1920px;
+        width: 100%;
         height: auto;
     }
     .m1_btn{
@@ -499,6 +553,10 @@ a{
         width: 50%;
         height: auto;
         background-size: cover;
+    }
+    .right_list img{
+        width: auto;
+        height: 300px;
     }
     /* 메인4 */
     .link_mo{
@@ -751,12 +809,88 @@ a{
     }
     
 }
+/* ---------------테블릿sub------------- */
+@media screen and (min-width: 1000px){
+    .m2_title p{
+        font-size: 12px;
+        letter-spacing: 2px;
+        font-weight: 500;
+    }
+    .m2_title p span{
+        font-size: 23px;
+        font-weight: 700;
+    }
+    .m2_title p::before{
+        height: 2px;
+    }
+    .m2_text{
+        width: 100%;
+    }
+    .text_mo{
+        display: none;
+    }
+    .text_pc{
+        display: block;
+    }
+    .text_pc span{
+        display: inline-block;
+    }
+    .left_inner{
+        display: block;
+    }
+    .img_list{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .img_list div:last-child{
+        margin-right: 25px;
+    }
+    .list_sub{
+        position: relative;
+    }
+    .m2_img{
+        width: 145px;
+        height: auto;
+        border-radius: 50%;
+    }
+    .img_bg{
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: rgba(11, 63, 54, 0.5);
+        border-radius: 50%;
+    }
+    .list_sub p:last-child{
+        position: absolute;
+        top: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+    .list_sub a{
+        font-size: 18px;
+        font-weight: 300;
+        color: #fff;
+    }
+    .right_list img{
+        height: 450px;
+    }
+    .text_sub{
+        margin-top: 20px;
+    }
 
+}
 /*----------------PC---------------*/
 @media screen and (min-width:1100px){
     .inner{
         width: 1200px;
         margin: 0 auto;
+    }
+    .main1 .inner{
+        width: 1920px;
     }
     .slide_photo .mo{
         display: none;
@@ -767,13 +901,17 @@ a{
     .m1_btn{
         position: absolute;
         bottom: 50px;
-        left: 0;
-        background-color: aqua;
+        left: 10%;
     }
     .m1_btn button{
         display: block;
         width: 30px;
         height: 30px;
+        border: 0;
+    }
+    .m1_pause{
+        display: block;
+        background-image: url(../img/btn_pause.png);
     }
     /* 메인4 */
     .m4_slick{
@@ -784,5 +922,12 @@ a{
         display: flex;
         width: 1200px;
         margin: 0 auto;
+    }
+    /* 메인5 */
+    .main5_in{
+        width: 1840px;
+    }
+    .m5_item{
+        transform: translateX(0);
     }
 }

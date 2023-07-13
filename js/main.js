@@ -17,9 +17,11 @@ $('.right_list').slick({
     speed: 500,
     fade: true,
     cssEase: 'linear',
-    autoPlay: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
     prevArrow: false,
     nextArrow: false,
+    dots: true
 });
 
 //메인4 슬릭
@@ -44,4 +46,15 @@ $('.slick_inner').slick({
             }
         }
     ]
-  });
+});
+
+//메인5 place_drop 열고 닫기
+$('.place').click(function(){
+    let placeDrop = $(this).siblings('.place_drop');
+    if(placeDrop.css('display') === 'none'){
+        placeDrop.css('display','block')
+    } else{
+        placeDrop.css('display','none');
+    }
+    return false;
+});
