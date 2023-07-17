@@ -168,10 +168,10 @@ a{
 .m2_right{
     position: relative;
 }
-.slick-dots{
+.right_list .slick-dots{
     display: block;
     position: absolute;
-    width: 10px;
+    width: 100px;
     height: 10px;
     top: 50%;
     left: 5%;
@@ -298,9 +298,9 @@ a{
 }
 /* 메인5 */
 .main5{
+    overflow: hidden;
     height: auto;
     margin-top: 50px;
-    margin-bottom: 100px;
 }
 .main5_in{
     width: 100%;
@@ -425,7 +425,7 @@ a{
     background-color: #fff;
     width: 165px;
     border: 1px solid #000;
-    z-index: 1;
+    z-index: 10000000;
 }
 .place_drop a{
     display: block;
@@ -925,9 +925,13 @@ a{
     }
     /* 메인5 */
     .main5_in{
-        width: 1840px;
+        width: 1200px;
     }
     .m5_item{
         transform: translateX(0);
+    }
+    .m5_bg{
+        width: 1920px;
+        margin-left: -320px;
     }
 }

@@ -58,3 +58,15 @@ $('.pc_gnb').mouseover(function(){
     $('.d2_row').stop().slideUp();
     return false;
 });
+
+//푸터 공지사항
+$('.f_txt_list').slick({
+    vertical : true,
+    arrows : true,
+    autoplay : true,
+    autoplaySpeed : 2000,
+    prevArrow : '.f_prev',
+    nextArrow : '.f_next',
+    speed : 1000,
+    infinite: true,
+});
