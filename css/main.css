@@ -61,13 +61,13 @@ a{
 .m1_pause{
     display: none;
 }
+.m1_btn .m1_play{
+    display: none;
+}
 .m1_btn{
     position: absolute;
     bottom: 0;
     display: flex;
-}
-.m1_btn button:last-child{
-    margin-left: -4px;
 }
 .m1_btn button{
     background-repeat: no-repeat;
@@ -171,14 +171,22 @@ a{
 .right_list .slick-dots{
     display: block;
     position: absolute;
-    width: 100px;
-    height: 10px;
     top: 50%;
+    transform: translateY(-50%);
     left: 5%;
+}
+.right_list .slick-dots button{
+    background-color: #fff;
+    width: 10px;
+    height: 10px;
     border: 0;
-    background-color: #1e90ff;
-} /* 메인2 점 만들기 */
-
+    border-radius: 50%;
+    text-indent: -99999px;
+    margin: 5px 0;
+}
+.right_list .slick-active button{
+    background-color: #a0bf6c;
+}
 /* 메인3 */
 .main3{
     margin-top: 20px;
@@ -298,9 +306,10 @@ a{
 }
 /* 메인5 */
 .main5{
-    overflow: hidden;
+    position: relative;
     height: auto;
     margin-top: 50px;
+    z-index: 1;
 }
 .main5_in{
     width: 100%;
@@ -375,7 +384,7 @@ a{
     border: 0;
     border-radius: 4px;
     margin-right: 10px;
-    padding-left: 15px;
+    padding: 0 15px 0 15px;
     font-size: 16px;
 }
 .input_right button{
@@ -425,7 +434,6 @@ a{
     background-color: #fff;
     width: 165px;
     border: 1px solid #000;
-    z-index: 10000000;
 }
 .place_drop a{
     display: block;
@@ -619,7 +627,6 @@ a{
         width: 100%;
         height: auto;
         margin: 0 10px;
-        background-color: rgba(0, 0, 0, 1);
     }
     .slick_text{
         position: absolute;
@@ -630,6 +637,7 @@ a{
         left: 0;
         height: 100%;
         padding-left: 20px;
+        z-index: 1;
     }
     .slick_text p{
         color: #fff;
@@ -643,11 +651,20 @@ a{
         font-size: 13px;
     }
     .slick_list img{
+        position: relative;
         width: 100%;
         height: auto;
         background-position: center;
         background-size: cover;
         object-fit: cover;
+    }
+    .slick_list .m4_bg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.2)
     }
     .m4_btn button{
         position: absolute;
@@ -871,6 +888,8 @@ a{
         text-align: center;
     }
     .list_sub a{
+        display: block;
+        width: 150px;
         font-size: 18px;
         font-weight: 300;
         color: #fff;
@@ -901,17 +920,20 @@ a{
     .m1_btn{
         position: absolute;
         bottom: 50px;
-        left: 10%;
+        left: 13%;
     }
     .m1_btn button{
         display: block;
         width: 30px;
         height: 30px;
         border: 0;
+        background-color: transparent;
     }
     .m1_pause{
-        display: block;
         background-image: url(../img/btn_pause.png);
+    }
+    .m1_play{
+        background-image: url(../img/btn_play.png);
     }
     /* 메인4 */
     .m4_slick{

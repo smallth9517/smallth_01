@@ -70,3 +70,16 @@ $('.f_txt_list').slick({
     speed : 1000,
     infinite: true,
 });
+
+//푸터 패밀리
+$('.f_site').click(function(){
+    let familydrop = $(this).siblings('.family_drop');
+    
+    if(!familydrop.hasClass('open')){
+        $('.family_drop').removeClass('open').stop().slideUp(200);
+        familydrop.addClass('open').stop().slideDown(200);
+    } else{
+        familydrop.removeClass('open').stop().slideUp(200);
+    }
+    return false;
+});

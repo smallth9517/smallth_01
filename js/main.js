@@ -7,8 +7,20 @@ $('.slide_list').slick({
     cssEase: 'linear',
     autoplay: true,
     autoplaySpeed: 3000,
-    prevArrow: 'm1_prev',
-    nextArrow: 'm1_next',
+    prevArrow : '.m1_prev',
+    nextArrow : '.m1_next',
+
+});
+//메인1 슬릭 버튼
+$('.m1_play').click(function(){
+    $('.slide_list').slick('slickPlay');
+    $(this).hide();
+    $('.m1_pause').show();
+});
+$('.m1_pause').click(function(){
+    $('.slide_list').slick('slickPause');
+    $(this).hide();
+    $('.m1_play').show();
 });
 
 //메인2 슬라이드(페이드인)
@@ -30,8 +42,8 @@ $('.slick_inner').slick({
     slidesToShow: 2,
     mobileFirst: true,
     arrows : true,
-    prevArrow: 'm4_prev',
-    nextArrow: 'm4_next',
+    prevArrow: '.m4_prev',
+    nextArrow: '.m4_next',
     responsive : [
         {
             breakpoint : 900,

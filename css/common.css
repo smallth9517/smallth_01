@@ -453,11 +453,22 @@ a{
     background-image: url(../img/icon_insta.png);
 }
 .copyright{
+    border-top: 1px solid rgba(224, 224, 224, 0.3);
     color: #bbb;
     font-size: 13.5px;
     font-weight: 100;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
+    line-height: 3;
+}
+.quick{
+    position: fixed;
+    bottom: 3%;
+    right: 2%;
+}
+.quick a{
+    width: 115px;
+    height: 115px;
 }
 /* -----------테블릿--------- */
 @media screen and (min-width:768px){
@@ -575,8 +586,8 @@ a{
         height: 13px;
         background-color: #ddd;
     }
-    .f_right{
-        width: 800px;
+    .footer_right{
+        width: 97%;
         display: flex;
         justify-content: space-between;
     }
@@ -588,13 +599,43 @@ a{
     }
     .family{
         display: block;
+        font-size: 13px;
+        font-weight: 100;
     }
-    .family .f_site{
+    .f_site{
+        margin-top: 25px;
+        padding: 0 15px;
+        border: 1px solid #ddd;
+        position: relative;
         display: block;
-        width: 100px;
-        height: 30px;
-        border: 1px solid #ff0404;
-        color: #ff0000;
+        width: 200px;
+        line-height: 2;
+        color: #414141;
+    }
+    .f_site::before{
+        content: "";
+        position: absolute;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        border-top: 5px solid #777;
+        right: 10px;
+        top: 10px;
+    }
+    .family_drop{
+        display: none;
+        position: absolute;
+        width: 200px;
+        padding: 0 15px;
+        border: 1px solid #ddd;
+        border-top: 0;
+        background-color: #fff;
+    }
+    .family_drop a{
+        color: #414141;
+        line-height: 2;
+    }
+    .family_drop li:hover a{
+        color: #93b658;
     }
 }
 /* 테블릿 종료 */
@@ -724,6 +765,7 @@ a{
     }
     /* 푸터 */
     .f_in{
+        position: relative;
         width: 1200px;
         margin: 0 auto;
     }
@@ -735,11 +777,28 @@ a{
         border: 0;
         border-bottom: 1px solid #ddd;
     }
+    .f_txt_list{
+        width: 400px;
+    }
+    .f_txt_list p{
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
     .f_bot{
         width: 1200px;
     }
     .bot_in{
         margin-left: 10px;
+    }
+    .footer_right{
+        position: absolute;
+        display: block;
+        width: auto;
+        top: 100px;
+        right: 0;
+    }
+    .txt_pc{
+        margin-bottom: 20px;
     }
 }
 /* PC 종료 */
