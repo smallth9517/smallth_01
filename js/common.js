@@ -60,16 +60,27 @@ $('.pc_gnb').mouseover(function(){
 });
 
 //푸터 공지사항
-$('.f_txt_list').slick({
+$('.f_left .f_txt_list').slick({
     vertical : true,
     arrows : true,
     autoplay : true,
-    autoplaySpeed : 2000,
-    prevArrow : '.f_prev',
-    nextArrow : '.f_next',
+    autoplaySpeed : 3000,
+    prevArrow : '.f_left .f_prev',
+    nextArrow : '.f_left .f_next',
     speed : 1000,
     infinite: true,
 });
+$('.f_right .f_txt_list').slick({
+    vertical : true,
+    arrows : true,
+    autoplay : true,
+    autoplaySpeed : 3000,
+    prevArrow : '.f_right .f_prev',
+    nextArrow : '.f_right .f_next',
+    speed : 1000,
+    infinite: true,
+});
+
 
 //푸터 패밀리
 $('.f_site').click(function(){

@@ -1,4 +1,3 @@
-
 //메인1 슬라이드(페이드인)
 $('.slide_list').slick({
     infinite: true,
